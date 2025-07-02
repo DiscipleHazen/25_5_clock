@@ -198,7 +198,9 @@ class Timer extends React.Component {
     // Deconstruct this.state object for ease of use
     const { minute, second, mode, breakLength, sessionLength } = this.state;
     return (
-      <div className="d-flex flex-column align-items-center bg-dark" style={{ minHeight: '100vh', paddingBottom: '20px' }}>
+      <div className="d-flex flex-column align-items-center bg-dark text-white" style={{ minHeight: '100vh', paddingBottom: '20px' }}>
+        <h1 className="mt-2">Pomodoro Clock</h1>
+        <p className="fs-5">A time managment technique developed by the Italian chef Francesco Cirillo, using a timer and break intervals. Pomodoro is italian for tomato!</p>
         <TimeSet updateTime={this.manageTime} breakLength={breakLength} sessionLength={sessionLength} />
         <TimerClock
           isRunning={this.state.isRunning}
